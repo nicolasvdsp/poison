@@ -1,0 +1,94 @@
+body {
+    background-color: purple;
+}
+.poison {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+    display: grid;
+    grid-auto-flow: column;
+}
+.p, .o_1, .i, .s, .o_2, .n {
+    position: relative;
+    content: "a";
+    height: 155px;
+    width: 85px;
+    /* background-color: rebeccapurple; */
+    background-image: url(../assets/1_p.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: auto 155px;
+}
+.p {
+    height: 206px;
+    width: 94px;
+    background-size: auto 206px;
+    margin-right: 12px;
+}
+.o_1 {
+    background-image: url(../assets/2_o.svg);
+}
+.i {
+    background-image: url(../assets/3_i.svg);
+    background-size: auto 208px;
+    background-position: 50% 0px;
+    height: 208px;
+    top: -53px;
+    width: 60px;
+    margin-left: 10px;
+
+}
+.s {
+    background-image: url(../assets/4_s.svg);
+}
+.o_2 {
+    background-image: url(../assets/5_o.svg);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.n {
+    background-image: url(../assets/6_n.svg);
+    width: 102px;
+}
+
+
+
+
+
+.drop {
+    position: absolute;
+    left: calc(50% + 125px);
+    transform: translateX(-50%);
+    top: 00px;
+    /* background-color: blueviolet; */
+    width: 70px;
+    height: 90px;
+    background-repeat: no-repeat;
+    background-size: 70px;
+    background-image: url(../assets/sprite_drop.svg);
+
+    animation: leak 0.8s steps(12) 0s 1 both, drop 0.44s cubic-bezier(0.21, 0.02, 0.65, 0.02) 0.80s 1 both;
+    /* animat: name dur timing-fx delay ic direction fillmode playstate */
+}
+
+
+
+
+
+@keyframes leak {
+    0%{
+        background-position-y: -1px;
+    }
+    100%{
+        background-position-y: -1081px;
+    }
+}
+@keyframes drop {
+    0%{
+        top: 0px;
+    }
+    100%{
+        top: 390px;
+    }
+}
